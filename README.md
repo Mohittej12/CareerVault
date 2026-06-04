@@ -1,97 +1,71 @@
-# Problem Statement
+# CareerVault
 
-In the modern recruitment process, companies receive thousands of resumes for a single job role. To handle this volume efficiently, most organizations use Applicant Tracking Systems (ATS) to automatically filter resumes before they reach human recruiters.
+**CareerVault** - Smart Resume Builder & Career Optimizer
 
-However, this creates several challenges for candidates:
+## Features
 
-## 🔴 Key Issues Faced by Job Seekers
-## ATS Rejection Without Feedback
-Many resumes are rejected automatically due to missing keywords or improper formatting, without any explanation to the candidate.
-## Lack of Awareness of Industry Standards
-Students and fresh graduates often do not know:
-What skills to include
-How to structure a resume
-What recruiters actually look for
-Poor Resume Formatting
-Incorrect layouts, excessive styling, or unstructured content can cause ATS systems to misread resumes.
-Skill Gap Identification
-Candidates are unaware of missing or in-demand skills relevant to their desired job roles.
-No Real-Time Guidance
-Traditional resume building lacks intelligent feedback, forcing users to rely on guesswork or manual review.
-## 📉 Impact of These Problems
-Qualified candidates get filtered out before shortlisting
-Increased rejection rates for freshers
-Time wasted in trial-and-error resume editing
-Reduced confidence among job seekers
-## 💡 Proposed Solution
+- 📄 **Career Profile Analyzer** - Upload your resume and target job description to get intelligent AI-powered analysis
+- 🎨 **Career Builder** - Create professional resumes with multiple export formats
+- 📥 **Smart Import** - Upload PDF/DOCX files or paste resume text
+- 💾 **Multiple Formats** - Download as PDF or ATS-friendly Word document
+- 🔒 **Privacy First** - All processing happens client-side with your personal Supabase account
 
-To address these challenges, this project introduces a Resume Analyzer & Resume Builder Web Application that provides both creation and evaluation capabilities in a single platform.
+## Tech Stack
 
-## 🛠️ Core Functionalities
-## 📝 1. Resume Builder
-Provides a structured form-based interface
-Ensures all important sections are included:
-Personal Information
-Education
-Skills
-Projects
-Work Experience
-Generates a clean, ATS-friendly resume format
-Allows users to download resumes as PDF
-## 🔍 2. Resume Analyzer
-Accepts resumes in PDF/DOCX format
-Extracts text using parsing libraries
-Performs analysis on:
-Keyword presence
-Skill relevance
-Content completeness
-Provides:
-ATS compatibility score
-Missing keyword suggestions
-Skill improvement recommendations
-## 🧠 3. Intelligent Feedback System
-Highlights weak areas in the resume
-Suggests improvements in:
-Skills
-Formatting
-Content structure
-Helps users iteratively improve their resumes
-## ⚙️ Approach / Methodology
-Data Extraction
-Resume content is extracted using tools like PyPDF2 and python-docx
-Text Processing
-Natural Language Processing (NLP) techniques are applied to:
-Clean and tokenize text
-Identify important keywords
-Keyword Matching
-Resume content is compared against:
-Predefined skill sets
-Industry-relevant keywords
-Scoring Mechanism
-Resume is evaluated based on:
-Keyword density
-Section completeness
-Formatting consistency
-Output Generation
-Generates:
-ATS score
-Suggestions for improvement
-Resume insights
-## 📈 Impact & Benefits
-✅ Helps candidates create ATS-friendly resumes
-✅ Reduces chances of automatic rejection
-✅ Provides instant feedback without human dependency
-✅ Bridges the gap between student knowledge and industry expectations
-✅ Saves time in resume building and editing
-✅ Improves overall job application success rate
-## 🎯 Real-World Use Case
-Students preparing for campus placements
-Fresh graduates applying for jobs
-Professionals switching careers
-Career guidance and training platforms
-## 🔮 Future Scope
-Integration with job portals for real-time job matching
-AI-based resume scoring using Machine Learning models
-Personalized skill recommendations based on job roles
-Multi-template and design customization
-Cloud deployment (Azure / AWS) for scalability
+- **Frontend**: React 18.3 + TypeScript 5.8 + Vite 5.4
+- **Styling**: Tailwind CSS 3.4 + ShadCN/UI components
+- **Form Management**: React Hook Form + Zod validation
+- **Document Generation**: jsPDF + DOCX
+- **Backend**: Supabase Edge Functions with your personal account
+- **File Parsing**: PDF.js + Mammoth
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Personal Supabase account
+
+### Installation
+
+```bash
+npm install
+```
+
+### Configuration
+
+Create a `.env.local` file in the project root:
+
+```
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_PUBLISHABLE_KEY=your_anon_key
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:8082](http://localhost:8082) in your browser.
+
+### Build
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── pages/           # Page components (Home, ResumeAnalyzer, ResumeBuilder)
+├── components/      # Reusable components (Navbar, NavLink, UI components)
+├── hooks/          # Custom React hooks
+├── integrations/   # Supabase client setup
+├── lib/            # Utility functions (PDF/DOCX generation)
+└── App.tsx         # Main app component
+```
+
+## License
+
+Personal use only.
