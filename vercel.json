@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd build-and-blend-cv && npm install && npm run build",
-  "outputDirectory": "build-and-blend-cv/dist",
   "rewrites": [
     {
       "source": "/(.*)",
