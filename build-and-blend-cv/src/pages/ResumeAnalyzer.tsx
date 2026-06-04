@@ -151,10 +151,10 @@ const ResumeAnalyzer = () => {
       <div className="container mx-auto max-w-6xl px-4 pt-24 pb-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Resume <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-primary">Analyzer</span>
+            Career <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-primary">Profile Analyzer</span>
           </h1>
           <p className="text-xl text-muted-foreground">
-            Get AI-powered insights to optimize your resume for any job
+            Get intelligent insights to position your career profile competitively
           </p>
         </div>
 

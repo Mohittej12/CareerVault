@@ -11,16 +11,16 @@ export const Navbar = () => {
             <FileText className="h-5 w-5 text-primary-foreground" />
           </div>
           <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-primary">
-            ResumeAI
+            CareerVault
           </span>
         </Link>
         
         <div className="flex items-center gap-2 sm:gap-4">
           <Link to="/analyzer">
-            <Button variant="ghost" className="text-foreground font-semibold hover:text-primary">Analyzer</Button>
+            <Button variant="ghost" className="text-foreground font-semibold hover:text-primary">Profile</Button>
           </Link>
           <Link to="/builder">
-            <Button variant="ghost" className="text-foreground font-semibold hover:text-primary">Builder</Button>
+            <Button variant="ghost" className="text-foreground font-semibold hover:text-primary">Resume</Button>
           </Link>
         </div>
       </div>
